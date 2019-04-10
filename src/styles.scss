@@ -1,0 +1,286 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#container {
+  max-width: 100vw;
+  padding: 3vh 5vw 0 5vw;
+  min-height: calc(100vh - 70px);
+}
+
+.footer {
+  height: 50px;
+  background-color: var(--main-bg-color);
+}
+
+#container {
+  .center {
+    text-align: center;
+  }
+  h1.title, h2.subtitle {
+    width: 50%;
+    color: var(--main-bg-color);
+    font-family: 'Roboto Light', sans-serif;
+    font-weight: 200;
+    font-size: 3vh;
+  }
+  h1.title {
+    float: left;
+    text-align: left;
+    b {
+      font-family: 'Roboto Black', sans-serif;
+      position: relative;
+      &:after {
+        content: '';
+        width: 5vw;
+        background: var(--main-bg-color);
+        height: .5vh;
+        position: absolute;
+        bottom: -1vh;
+        left: 0;
+      }
+    }
+  }
+  h2.subtitle {
+    float: right;
+    text-align: right;
+    text-transform: uppercase;
+  }
+  form {
+    clear: both;
+    padding: 3vh 0;
+    color: var(--main-bg-color);
+    font-family: 'Roboto Regular', sans-serif;
+    font-weight: 200;
+    overflow: hidden;
+    input {
+      display: block;
+    }
+  }
+}
+
+label {
+  display: block;
+}
+
+#container {
+  form input {
+    width: 400px;
+    padding: 1.5vh;
+    border: 1px #A5A5A5 solid;
+    border-radius: 5px;
+    margin-top: .5vh;
+    float: left;
+  }
+  .btn {
+    background-color: var(--main-bg-color);
+    color: #FFF;
+    text-align: center;
+    border: none;
+    padding: 1.2vh;
+    float: left;
+    font-size: 1.5vh;
+    margin: 5px 10px;
+    border: 1px solid var(--main-bg-color);
+    &:hover {
+      background-color: var(--hover-bg-color);
+      border: 1px solid var(--main-bg-color);
+      color: var(--main-bg-color);
+    }
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto-Regular', sans-serif;
+    thead th {
+      background-color: #C33530;
+      height: 5vh;
+      border-left: transparent .5vh solid;
+      color: #FFF;
+      border-right: 10px solid #FFF;
+    }
+    tbody tr {
+      border-bottom: .5vh solid #F0D3D4;
+      &:hover {
+        background-color: var(--hover-bg-color);
+      }
+      td {
+        border: none;
+        padding: 20px;
+        text-align: left;
+        color: #4E4E4E;
+        font-family: "Roboto Regular", sans-serif;
+        &:nth-child(1), &:nth-child(2) {
+          width: 30%;
+        }
+        &:nth-child(3) {
+          width: 40%;
+        }
+        &:first-child {
+          img {
+            vertical-align: middle;
+            display: inline;
+            border-radius: 99%;
+            border: 1px solid #4E4E4E;
+            max-width: 5vw;
+          }
+          span {
+            vertical-align: middle;
+            display: inline;
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+  #controls {
+    width: 100%;
+    text-align: center;
+    padding: 10vh 0;
+    div {
+      display: inline-block;
+    }
+    input[type="button"] {
+      background-color: var(--main-bg-color);
+      color: #FFF;
+      text-align: center;
+      border: none;
+      padding: 1.5vh;
+      float: left;
+      font-size: 1.5vh;
+      margin: 0 10px;
+      transition: all 3ms ease;
+      &:hover {
+        background-color: var(--hover-bg-color);
+        border-color: var(--main-bg-color);
+        color: var(--main-bg-color);
+      }
+      &:disabled {
+        background: #FFF;
+        color: var(--main-bg-color);
+        border: 1px solid var(--main-bg-color);
+      }
+    }
+    ul {
+      text-align: center;
+      list-style: none;
+      float: left;
+      li {
+        background: #FFF;
+        color: var(--main-bg-color);
+        border: 1px solid var(--main-bg-color);
+        width: 50px;
+        height: 50px;
+        border-radius: 99%;
+        display: inline-block;
+        text-align: center;
+        line-height: 50px;
+        margin: 0 10px;
+        &.active {
+          background: var(--main-bg-color);
+          color: #FFF;
+          border: 1px solid var(--main-bg-color);
+        }
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+  #container h1 {
+    width: 100%;
+    font-size: 2.5vh;
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .mobile {
+    display: none;
+  }
+  #container h1 {
+    width: 100%;
+    font-size: 2.5vh;
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .mobile {
+    display: none;
+  }
+  #container h1 {
+    width: 100%;
+    font-size: 2.5vh;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .mobile {
+    display: none;
+  }
+  #container {
+    h1.title {
+      width: calc(100vw - 40px);
+      font-size: 2.5vh;
+      padding: 0 20px;
+    }
+    form {
+      padding: 5vw 20px;
+    }
+    table tbody tr td:nth-child(1) {
+      width: 100%;
+    }
+    padding: 3vh 0 0 0;
+    form input {
+      max-width: 220px;
+    }
+    table {
+      thead th {
+        border: none;
+      }
+      tbody tr td:first-child img {
+        max-width: 20vw;
+      }
+    }
+    #controls {
+      ul li {
+        &:first-child {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+        }
+        display: none;
+      }
+      input[type="button"] {
+        margin: 0 5px;
+        padding: 0.5vh;
+      }
+    }
+  }
+}
