@@ -74,8 +74,4 @@ export class DetailsPage implements OnInit {
     })
   }
 
-  openUrl (url:string) {
-    window.open(url)
-  }
-
 }

@@ -130,13 +130,6 @@ label {
           width: 40%;
         }
         &:first-child {
-          img {
-            vertical-align: middle;
-            display: inline;
-            border-radius: 99%;
-            border: 1px solid #4E4E4E;
-            max-width: 5vw;
-          }
           span {
             vertical-align: middle;
             display: inline;
@@ -268,9 +261,6 @@ label {
     table {
       thead th {
         border: none;
-      }
-      tbody tr td:first-child img {
-        max-width: 20vw;
       }
     }
     #controls {
