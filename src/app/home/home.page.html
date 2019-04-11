@@ -1,16 +1,15 @@
 <ion-content>
   <section id="container">
-    <h1 class="title"><b>BUSCA MARVEL</b></h1>
-    <h2 class="subtitle mobile"></h2>
-    <div *ngIf="heroes.length === 0">
-      {{loading}}
+    <div *ngIf="heroes.length === 0" id="loading" class="center">
+      <h1>{{loading}}</h1>
     </div>
     <div *ngIf="heroes.length > 0">
+      <h1 class="title"><b>BUSCA MARVEL</b></h1>
+      <h2 class="subtitle mobile"></h2>
       <form>
         <label for="name">Nome do Personagem</label>
         <input type="text" id="nome" placeholder="Filtre por nome do personagem" [value]="name" (input)="name = $event.target.value">
         <button id="search" class="btn" type="button" (click)="findHeroes()">Buscar</button>
-        {{name}}
       </form>
       <table>
         <thead>
@@ -33,6 +32,6 @@
           <input type="button" id="last" value="Última Página" (click)="lastPage()"  [disabled]="last" />
         </div>
       </div>
-    </div> 
+    </div>
   </section>
 </ion-content>

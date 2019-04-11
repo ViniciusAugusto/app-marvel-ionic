@@ -1,0 +1,61 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    
+  </ion-toolbar>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-left">Personagem</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+            <div class="ion-text-center">
+              <ion-avatar class="avatar">
+                <img src="{{character.image}}">
+              </ion-avatar>
+              <h3>{{character.name}}</h3>
+              {{character.description}}
+            </div>
+            <ion-list lines="full" *ngIf="character.seriesData.length > 0">
+              <ion-item-divider lines="none">
+                <ion-label>
+                  Series
+                </ion-label>
+              </ion-item-divider>
+              <ion-item lines="none" padding-top="10px"  *ngFor="let serie of character.seriesData">
+                <ion-thumbnail slot="start">
+                  <img src="{{serie.image}}">
+                </ion-thumbnail>
+                <ion-label>
+                  <h2>{{serie.title}}</h2>
+                </ion-label>
+                <!-- <ion-button (click)="openUrl(serie.urls[0].url)" fill="outline" slot="end">Ver detalhes</ion-button> -->
+              </ion-item>
+            </ion-list>
+            <ion-list lines="full" *ngIf="character.eventsData.length > 0">
+              <ion-item-divider lines="none">
+                <ion-label>
+                  Eventos
+                </ion-label>
+              </ion-item-divider>
+              <ion-item lines="none" padding-top="10px"  *ngFor="let event of character.eventsData">
+                <ion-thumbnail slot="start">
+                  <img src="{{event.image}}">
+                </ion-thumbnail>
+                <ion-label>
+                  <h2>{{event.title}}</h2>
+                </ion-label>
+                <!-- <ion-button (click)="openUrl(serie.urls[0].url)" fill="outline" slot="end">Ver detalhes</ion-button> -->
+              </ion-item>
+            </ion-list>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>

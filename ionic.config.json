@@ -1,5 +1,7 @@
 {
   "name": "app-marvel-ionic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

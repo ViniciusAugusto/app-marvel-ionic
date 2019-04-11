@@ -24,6 +24,12 @@ html, body {
   .center {
     text-align: center;
   }
+  #loading {
+    color: var(--main-bg-color);
+    font-family: 'Roboto Light', sans-serif;
+    font-weight: 200;
+    font-size: 3vh;
+  }
   h1.title, h2.subtitle {
     width: 50%;
     color: var(--main-bg-color);
