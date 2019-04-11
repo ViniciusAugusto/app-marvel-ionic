@@ -17,7 +17,7 @@ export class Api {
 
   generateUrl (path, limit, offset) {
     let hashKey = this.generateHashKey()
-    return '//' + this.url + path + '?apikey=' + this.apiPublicKey + '&ts=' + hashKey.ts + '&hash=' + hashKey.hash+'&limit=' + limit + '&offset=' + offset + '&orderBy=name';
+    return '//' + this.url + path + '?apikey=' + this.apiPublicKey + '&ts=' + hashKey.ts + '&hash=' + hashKey.hash+'&limit=' + limit + '&offset=' + offset;
   }
 
   get (path, limit, offset, name = '') {

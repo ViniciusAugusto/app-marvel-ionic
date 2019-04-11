@@ -24,7 +24,7 @@ export class HomePage {
   public last:boolean = false
   public loading: string = 'Carregando dados - 0%'
   public name:string = ''
-  // public author = 'Vinicius Augusto Cunha'
+  public author = 'Vinicius Augusto Cunha'
   constructor(public api: Api, public loadingController: LoadingController, private router: Router){
     this.preLoad()
   }
