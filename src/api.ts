@@ -35,8 +35,8 @@ export class Api {
         })
           .then((response) => {
             if (response.status === 200) {
-              response.json().then((data) => {
-                resolve(data)
+              response.json().then((result) => {
+                resolve(result)
               })
             } else {
               response.json().then((error) => {

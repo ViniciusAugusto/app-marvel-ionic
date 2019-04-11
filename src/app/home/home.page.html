@@ -1,53 +1,38 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header> -->
-
 <ion-content>
-  <div id="container">
+  <section id="container">
     <h1 class="title"><b>BUSCA MARVEL</b></h1>
     <h2 class="subtitle mobile"></h2>
-    <form>
-      <label for="name">Nome do Personagem</label>
-      <input type="text" id="nome" placeholder="Filtre por nome do personagem">
-      <button id="search" class="btn" type="button">Buscar</button>
-    </form>
-    <table>
-      <thead>
-        <tr>
-          <th>Personagem</th>
-          <th class="mobile">Séries</th>
-          <th class="mobile">Eventos</th>
-        </tr>
-      </thead>
-      <tbody id="list">
-          <tr *ngFor="let item of heroes; let i = index">
-            <td>
-              <img src="{{heroes[i].image}}" alt="{{heroes[i].name.trim()}}">
-              <span>{{heroes[i].name.trim()}}</span>
-            </td>
-            <td class="mobile">
-              <ul>
-                <li *ngFor="let serie of heroes[i].series">
-                  {{serie.name}}
-                </li>
-              </ul>
-            </td>
-            <td class="mobile">
-              <ul>
-                <li *ngFor="let event of heroes[i].events">
-                  {{event.name}}
-                </li>
-              </ul>
-            </td>
+    <div *ngIf="heroes.length === 0">
+      {{loading}}
+    </div>
+    <div *ngIf="heroes.length > 0">
+      <form>
+        <label for="name">Nome do Personagem</label>
+        <input type="text" id="nome" placeholder="Filtre por nome do personagem" [value]="name" (input)="name = $event.target.value">
+        <button id="search" class="btn" type="button" (click)="findHeroes()">Buscar</button>
+        {{name}}
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Personagem</th>
+            <th class="mobile">Séries</th>
+            <th class="mobile">Eventos</th>
           </tr>
-      </tbody>
-    </table>
-    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-      <ion-infinite-scroll-content></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
-  </div>
+        </thead>
+        <tbody id="list">
+        </tbody>
+      </table>
+      <div id="controls">
+        <div>
+          <input type="button" id="first" value="Primeira Página" (click)="firstPage()" [disabled]="first" />
+          <input type="button" id="previous" value="Página Anterior" (click)="previousPage()"  [disabled]="previous"  />
+          <ul id="numbers">
+          </ul>
+          <input type="button" id="next" value="Próxima Pagina" (click)="nextPage()"  [disabled]="next" />
+          <input type="button" id="last" value="Última Página" (click)="lastPage()"  [disabled]="last" />
+        </div>
+      </div>
+    </div> 
+  </section>
 </ion-content>
