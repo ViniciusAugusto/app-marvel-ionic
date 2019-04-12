@@ -2,7 +2,6 @@
 
 App consists of searching and listing the heroes of the marvel through the api: 'https://developer.marvel.com/'
 
-
 ## Getting Started
 
 ## [Demo]()
@@ -26,13 +25,19 @@ npm install
 ionic serve --local
 ```
 
+## Build
+
+```
+ionic cordova build android
+```
+
 ## Contributing
 
-Please read [CONTRIBUTING](https://github.com/ViniciusAugusto/app-marvel-ionic/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING](https://github.com/ViniciusAugusto/app-marvel-ionic/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/ViniciusAugusto/app-test-api-marvel/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/ViniciusAugusto/app-marvel-ionic/tags).
 
 ## Authors
 
